@@ -5,13 +5,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
+from pathlib import Path
 
 # -------------------------
 # Load expression data
 # -------------------------
-
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 expr_df = pd.read_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\GSE111653_GilkesSalmonCounts.csv"
+    PROJECT_ROOT / "GSE111653_GilkesSalmonCounts.csv"
 )
 
 # -------------------------
@@ -19,7 +20,7 @@ expr_df = pd.read_csv(
 # -------------------------
 
 deg = pd.read_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\results\paired_differential_expression.csv"
+    PROJECT_ROOT / "results" / "paired_differential_expression.csv"
 )
 
 TOP_N = 200
