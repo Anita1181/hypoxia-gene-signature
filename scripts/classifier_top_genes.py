@@ -23,7 +23,7 @@ deg = pd.read_csv(
     PROJECT_ROOT / "results" / "paired_differential_expression.csv"
 )
 
-TOP_N = 200
+TOP_N = 20
 
 top_genes = deg.head(TOP_N)["Gene"].tolist()
 
