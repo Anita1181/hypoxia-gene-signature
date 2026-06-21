@@ -135,14 +135,14 @@ The identified genes are consistent with previously reported hypoxia-regulated p
 I noticed that the original classification pipeline (`classifier_top_genes.py` and `cross_validation.py`)
 had two methodological issues that can inflate reported performance:
 
-1. **Gene selection used the whole dataset, including the test data** — Before splitting
+1. **Gene selection used the whole dataset, including the test data**: Before splitting
    the data into train/test groups, I picked the top genes using *all* the samples,
    including the ones that were later used to test the model. This means the test data
    wasn't really "unseen" by the time evaluation happened, since it helped decide which
    genes got picked in the first place. That can make the model look better than it
    actually is at predicting new data.
 
-2. **Matched samples got split apart by accident** — Each cell line has two samples: one
+2. **Matched samples got split apart by accident**: Each cell line has two samples: one
    grown in hypoxia and one in normoxia. The original split didn't account for this, so
    sometimes one sample from a pair ended up in training while its match ended up in
    testing. This could let the model partly "cheat" by recognizing which cell line a
