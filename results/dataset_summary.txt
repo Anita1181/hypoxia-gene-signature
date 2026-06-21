@@ -1,0 +1,14 @@
+Dataset Shape: (56470, 63)
+
+Columns:
+['Unnamed: 0', 'BT20_1percent', 'BT20_20percent', 'BT474_1percent', 'BT474_20percent', 'BT549_1percent', 'BT549_20percent', 'CAMA1_1percent', 'CAMA1_20percent', 'DU4475_1percent', 'DU4475_20percent', 'HBL100_1percent', 'HBL100_20percent', 'HCC1428_1percent', 'HCC1428_20percent', 'HCC1569_1percent', 'HCC1569_20percent', 'HCC1806_1percent', 'HCC1806_20percent', 'HCC1937_1percent', 'HCC1937_20percent', 'HCC38_1percent', 'HCC38_20percent', 'HME_1percent', 'HME_20percent', 'HS578T_1percent', 'HS578T_20percent', 'htert-HME_1percent', 'htert-HME_20percent', 'MCF10A_1percent', 'MCF10A_20percent', 'MCF12A_1percent', 'MCF12A_20percent', 'MCF-7_1percent', 'MCF-7_20percent', 'MDA-MB-157_1percent', 'MDA-MB-157_20percent', 'MDA-MB-175_1percent', 'MDA-MB-175_20percent', 'MDA-MB-231_1percent', 'MDA-MB-231_20percent', 'MDA-MB-436_1percent', 'MDA-MB-436_20percent', 'MDA-MB-468_1percent', 'MDA-MB-468_20percent', 'SKBR3_1percent', 'SKBR3_20percent', 'SUM1315_1percent', 'SUM1315_20percent', 'SUM149_1percent', 'SUM149_20percent', 'SUM159_1percent', 'SUM159_20percent', 'SUM185_1percent', 'SUM185_20percent', 'Sum225CWN_1percent', 'Sum225CWN_20percent', 'SUM229_1percent', 'SUM229_20percent', 'T47D_1percent', 'T47D_20percent', 'ZR-75-1_1percent', 'ZR-75-1_20percent']
+
+First 5 Rows:
+  Unnamed: 0  BT20_1percent  ...  ZR-75-1_1percent  ZR-75-1_20percent
+0  5_8S_rRNA       0.000000  ...           0.00000       0.000000e+00
+1    5S_rRNA       2.500000  ...           0.00000       0.000000e+00
+2        7SK       1.554474  ...           0.00000       1.994140e-07
+3       A1BG      33.453610  ...          99.51200       1.367675e+02
+4   A1BG-AS1      31.075880  ...          91.93646       1.379023e+02
+
+[5 rows x 63 columns]
