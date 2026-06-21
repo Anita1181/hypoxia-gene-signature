@@ -1,14 +1,16 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 from sklearn.ensemble import RandomForestClassifier
 
 expr_df = pd.read_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\GSE111653_GilkesSalmonCounts.csv"
+    PROJECT_ROOT / "GSE111653_GilkesSalmonCounts.csv"
 )
 
 deg = pd.read_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\results\paired_differential_expression.csv"
+    PROJECT_ROOT / "results" / "paired_differential_expression.csv"
 )
 
 TOP_N = 20
@@ -46,6 +48,6 @@ importance_df = importance_df.sort_values(
 print(importance_df)
 
 importance_df.to_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\results\feature_importance.csv",
+    PROJECT_ROOT / "results" / "feature_importance.csv",
     index=False
 )
