@@ -154,12 +154,12 @@ cross-validation**:
 - Samples are split using `StratifiedGroupKFold`, grouped by cell line, so paired
   samples are never separated across train/test.
 - Differential expression (gene selection) is recomputed *independently within each
-  training fold*, using only that fold's training cell lines — never the held-out
+  training fold*, using only that fold's training cell lines, and never the held-out
   test cell lines.
 
-**All other analyses in this repository (feature importance, ROC curve, top-gene
+All other analyses in this repository (feature importance, ROC curve, top-gene
 plots) were performed using the original `classifier_top_genes.py` pipeline and
-predate this correction.** They are kept as-is for transparency, but the headline
+predate this correction. They are kept as-is for transparency, but the headline
 performance numbers below come from the corrected, leakage-free pipeline.
 
 ### Leaky vs. Fixed Methodology (TOP_N = 20, held constant for fair comparison)
@@ -189,7 +189,7 @@ unseen cell lines, rather than the original numbers being artifacts of leakage.
 **Mean ROC-AUC: 0.920 (± see script output)**
 
 Note: perfect scores in folds 3 and 5 reflect small per-fold test sets (n=6 cell
-lines) rather than indicating an error-free model — a note worth keeping in
+lines) rather than indicating an error-free model - a note worth keeping in
 mind given the limited overall sample size.
 
 ## References
