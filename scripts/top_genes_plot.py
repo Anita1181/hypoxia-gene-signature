@@ -1,8 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 df = pd.read_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\results\paired_differential_expression.csv"
+    PROJECT_ROOT / "results" / "paired_differential_expression.csv"
 )
 
 top20 = df.head(20)
@@ -23,7 +25,7 @@ plt.gca().invert_yaxis()
 plt.tight_layout()
 
 plt.savefig(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\figures\top20_hypoxia_genes.png",
+    PROJECT_ROOT / "figures" / "top20_hypoxia_genes.png",
     dpi=300
 )
 
