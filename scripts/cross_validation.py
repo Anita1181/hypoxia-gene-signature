@@ -4,13 +4,15 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import cross_val_score
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 expr_df = pd.read_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\GSE111653_GilkesSalmonCounts.csv"
+    PROJECT_ROOT / "GSE111653_GilkesSalmonCounts.csv"
 )
 
 deg = pd.read_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\results\paired_differential_expression.csv"
+    PROJECT_ROOT / "results" / "paired_differential_expression.csv"
 )
 
 TOP_N = 20
