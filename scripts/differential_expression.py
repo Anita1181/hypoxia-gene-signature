@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-FILE_PATH = r"D:\Main Folder\Misc\Project1_Hypoxia\GSE111653_GilkesSalmonCounts.csv"
+FILE_PATH = PROJECT_ROOT / "GSE111653_GilkesSalmonCounts.csv"
 
 df = pd.read_csv(FILE_PATH)
 
@@ -43,7 +45,7 @@ deg = deg.sort_values(
 )
 
 deg.to_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\results\differential_expression.csv",
+    PROJECT_ROOT / "results" / "differential_expression.csv",
     index=False
 )
 
