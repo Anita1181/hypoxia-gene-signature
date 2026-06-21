@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
@@ -10,7 +12,7 @@ from sklearn.decomposition import PCA
 # LOAD DATA
 # ==========================
 
-FILE_PATH = r"D:\Main Folder\Misc\Project1_Hypoxia\GSE111653_GilkesSalmonCounts.csv"
+FILE_PATH = PROJECT_ROOT / "GSE111653_GilkesSalmonCounts.csv"
 
 df = pd.read_csv(FILE_PATH)
 
@@ -145,7 +147,7 @@ plt.legend(handles=legend_elements)
 plt.tight_layout()
 
 plt.savefig(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\figures\pca_hypoxia_vs_normoxia.png",
+    PROJECT_ROOT / "figures" / "pca_hypoxia_vs_normoxia.png",
     dpi=300
 )
 
