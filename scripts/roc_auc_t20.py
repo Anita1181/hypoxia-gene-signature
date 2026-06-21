@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -16,11 +18,11 @@ from sklearn.metrics import (
 # ==========================================
 
 expr_df = pd.read_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\GSE111653_GilkesSalmonCounts.csv"
+    PROJECT_ROOT / "GSE111653_GilkesSalmonCounts.csv"
 )
 
 deg = pd.read_csv(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\results\paired_differential_expression.csv"
+    PROJECT_ROOT / "results" / "paired_differential_expression.csv"
 )
 
 # ==========================================
@@ -129,7 +131,7 @@ plt.legend()
 plt.tight_layout()
 
 plt.savefig(
-    r"D:\Main Folder\Misc\Project1_Hypoxia\figures\roc_auc_top20.png",
+    PROJECT_ROOT / "figures" / "roc_auc_top20.png",
     dpi=300
 )
 
